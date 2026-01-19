@@ -1,81 +1,93 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #f4f6f9;
+    background: #f7f7f7;
     color: #333;
 }
 
+/* Header */
 header {
-    background: linear-gradient(135deg, #0d6efd, #20c997);
-    color: red;
+    background: linear-gradient(135deg, #c4161c, #f5c400);
+    color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 45px 20px;
 }
 
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Navigation */
 nav {
-    background: #222;
+    background: #c4161c;
     padding: 12px;
     text-align: center;
 }
 
 nav a {
-    color: pink;
-    margin: 0 15px;
+    color: white;
+    margin: 0 18px;
     text-decoration: none;
     font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
 nav a:hover {
-    color: #20c997;
+    color: #f5c400;
 }
 
+/* Hero section */
 .hero {
-    background: yellow;
+    background: white;
     margin: 30px;
-    padding: 30px;
-    border-radius: 12px;
+    padding: 35px;
+    border-radius: 15px;
+    border-top: 6px solid #c4161c;
     animation: fadeIn 1.2s;
 }
 
+/* Content */
 .content {
     margin: 30px;
 }
 
+/* Card design */
 .card {
     background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 6px solid #0d6efd;
-    border-radius: 8px;
-    transition: transform 0.3s;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 8px solid #f5c400;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+    color: #c4161c;
 }
 
 .card:hover {
-    transform: scale(1.03);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
+/* Footer */
 footer {
-    background: #222;
+    background: #c4161c;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 18px;
+    margin-top: 40px;
 }
 
+/* Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(25px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-
-
-
-
-
-
-
