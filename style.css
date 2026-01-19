@@ -19,7 +19,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: pink;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -71,5 +71,6 @@ footer {
         transform: translateY(0);
     }
 }
+
 
 
