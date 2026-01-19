@@ -97,10 +97,24 @@ footer {
     color: white;
     text-align: center;
     padding: 40px 20px;
+    
+    position: relative;
+
 }
 
 .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     width: 110px;
-    margin-bottom: 15px;
-    animation: fadeIn 1.2s;
+    z-index: 2;
 }
+
+.gambar-utama {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+
