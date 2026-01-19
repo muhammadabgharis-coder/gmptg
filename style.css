@@ -30,7 +30,7 @@ nav a:hover {
 }
 
 .hero {
-    background: black;
+    background: yellow;
     margin: 30px;
     padding: 30px;
     border-radius: 12px;
@@ -71,4 +71,5 @@ footer {
         transform: translateY(0);
     }
 }
+
 
