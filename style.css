@@ -42,7 +42,7 @@ nav a:hover {
 }
 
 .card {
-    background: white;
+    background: blue;
     padding: 20px;
     margin-bottom: 20px;
     border-left: 6px solid #0d6efd;
@@ -71,6 +71,7 @@ footer {
         transform: translateY(0);
     }
 }
+
 
 
 
