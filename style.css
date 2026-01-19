@@ -105,10 +105,12 @@ footer {
 .logo {
     position: absolute;
     top: 20px;
-    left: 20px;
-    width: 110px;
+    left: 50%;         /* tengah horizontal */
+    transform: translateX(-50%);  /* betul-betul tengah */
+    width: 160px;
     z-index: 2;
 }
+
 
 .gambar-utama {
     width: 100%;
@@ -143,5 +145,6 @@ footer {
     object-fit: cover;     /* supaya gambar petak tak herot */
     border-radius: 8px;
 }
+
 
 
