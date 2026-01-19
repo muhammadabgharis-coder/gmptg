@@ -107,7 +107,7 @@ footer {
     top: 20px;
     left: 50%;         /* tengah horizontal */
     transform: translateX(-50%);  /* betul-betul tengah */
-    width: 160px;
+    width: 150px;
     z-index: 2;
 }
 
@@ -145,6 +145,7 @@ footer {
     object-fit: cover;     /* supaya gambar petak tak herot */
     border-radius: 8px;
 }
+
 
 
 
