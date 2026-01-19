@@ -118,3 +118,11 @@ footer {
 }
 
 
+.gambar-kursus {
+    width: 100%;          /* gambar ikut lebar card */
+    height: 180px;        /* tinggi tetap supaya semua card sama */
+    object-fit: cover;    /* gambar tak herot, cover card */
+    border-radius: 8px;   /* bucu lembut */
+    margin-bottom: 15px;  /* jarak antara gambar & tajuk */
+}
+
