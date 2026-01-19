@@ -91,3 +91,16 @@ footer {
         transform: translateY(0);
     }
 }
+
+.header-giatmara {
+    background: linear-gradient(135deg, #c4161c, #f5c400);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 110px;
+    margin-bottom: 15px;
+    animation: fadeIn 1.2s;
+}
