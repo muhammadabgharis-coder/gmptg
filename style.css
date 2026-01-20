@@ -100,7 +100,15 @@ footer {
 }
 
 /* Images */
+/* Images */
 .gambar-utama, .gambar-kursus, .card-image img, .hero-image img {
+
+    width: 100%;          /* ikut saiz kotak */
+    max-width: 500px;     /* ⬅ gambar TAK lebih 500px */
+    height: auto;         /* jaga nisbah gambar */
+    display: block;       
+    margin: 20px auto;    /* center */
+
     border: 2px solid #00ff00;
     box-shadow: 0 0 8px #00ff00;
     border-radius: 8px;
