@@ -1,52 +1,54 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f7f7f7;
-    color: #333;
+    font-family: 'Courier New', monospace; /* rasa terminal hacker */
+    background: #0d0d0d; /* hitam gelap */
+    color: #00ff00;       /* teks neon hijau */
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #c4161c, #f5c400);
-    color: white;
+    background: linear-gradient(135deg, #001100, #003300); /* gelap ke hijau */
+    color: #00ff00;
     text-align: center;
     padding: 80px 20px;
     width: 100%;
 }
 
-
-
 header h1 {
     margin-bottom: 10px;
+    text-shadow: 0 0 8px #00ff00; /* glow hacker */
 }
 
 /* Navigation */
 nav {
-    background: #c4161c;
+    background: #001100; /* gelap */
     padding: 12px;
     text-align: center;
 }
 
 nav a {
-    color: white;
+    color: #00ff00;
     margin: 0 18px;
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 0.5px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #f5c400;
+    color: #00ffff; /* neon cyan effect */
+    text-shadow: 0 0 6px #00ffff;
 }
 
 /* Hero section */
 .hero {
-    background: white;
+    background: #111111; /* gelap untuk highlight */
     margin: 30px;
     padding: 35px;
     border-radius: 15px;
-    border-top: 6px solid #c4161c;
+    border-top: 6px solid #00ff00;
     animation: fadeIn 1.2s;
+    box-shadow: 0 0 15px #00ff00;
 }
 
 /* Content */
@@ -56,31 +58,33 @@ nav a:hover {
 
 /* Card design */
 .card {
-    background: white;
+    background: #111111;
     padding: 25px;
     margin-bottom: 25px;
-    border-left: 8px solid #f5c400;
+    border-left: 8px solid #00ff00;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 12px rgba(0,255,0,0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card h3 {
-    color: #c4161c;
+    color: #00ff00;
+    text-shadow: 0 0 4px #00ff00;
 }
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0,255,0,0.4);
 }
 
 /* Footer */
 footer {
-    background: #c4161c;
-    color: white;
+    background: #001100;
+    color: #00ff00;
     text-align: center;
     padding: 18px;
     margin-top: 40px;
+    text-shadow: 0 0 4px #00ff00;
 }
 
 /* Animation */
@@ -95,84 +99,9 @@ footer {
     }
 }
 
-.header-giatmara {
-    background: linear-gradient(135deg, #c4161c, #f5c400);
-    color: white;
-    text-align: center;
-    padding: 30px 10px;
-    
-    position: relative;
-
-}
-
-.logo {
-    position: absolute;
-    top: 20px;
-    left: 50%;         /* tengah horizontal */
-    transform: translateX(-50%);  /* betul-betul tengah */
-    width: 130px;
-    z-index: 2;
-}
-
-
-.gambar-utama {
-    width: 300px;          /* saiz petak */
-    height: 300px;
-    object-fit: cover;     /* tak herot */
-    display: block;
-    margin: 0 auto;        /* tengah */
-    border-radius: 12px;   /* optional, bucu lembut */
-}
-
-
-.gambar-kursus {
-    width: 100%;          /* gambar ikut lebar card */
-    height: 180px;        /* tinggi tetap supaya semua card sama */
-    object-fit: cover;    /* gambar tak herot, cover card */
-    border-radius: 8px;   /* bucu lembut */
-    margin-bottom: 15px;  /* jarak antara gambar & tajuk */
-}
-
-.card-content {
-    display: flex;
-    align-items: center;   /* selari secara vertical */
-    justify-content: space-between;
-    gap: 20px;             /* jarak antara teks & gambar */
-}
-
-.card-text {
-    flex: 1;               /* teks ambil ruang yang ada */
-}
-
-.card-image img {
-    width: 150px;          /* saiz petak */
-    height: 150px;
-    object-fit: cover;     /* supaya gambar petak tak herot */
+/* Images */
+.gambar-utama, .gambar-kursus, .card-image img, .hero-image img {
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 8px #00ff00;
     border-radius: 8px;
 }
-
-
-.hero-image {
-    width: 280px;
-    height: 280px;
-    margin: 0 auto 20px auto; /* tengah + jarak bawah */
-    border-radius: 15px;
-    overflow: hidden; /* penting */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-
-
-
-
-
-
-
