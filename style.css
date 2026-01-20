@@ -99,7 +99,7 @@ footer {
     background: linear-gradient(135deg, #c4161c, #f5c400);
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 10px;
     
     position: relative;
 
@@ -166,6 +166,7 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+
 
 
 
