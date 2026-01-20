@@ -109,7 +109,22 @@ footer {
     display: block;       
     margin: 20px auto;    /* center */
 
+
+    /* Header GIATMARA */
+.header-giatmara img {
+    width: 100%;        /* ikut lebar header */
+    max-width: 400px;   /* ⬅ had maksimum (petak biasa) */
+    height: auto;       /* tak herot */
+    display: block;
+    margin: 0 auto 15px; /* center + jarak bawah */
+
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #00ff00;
+}
+
     border: 2px solid #00ff00;
     box-shadow: 0 0 8px #00ff00;
     border-radius: 8px;
 }
+
