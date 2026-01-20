@@ -116,4 +116,9 @@ footer {
     align-items: center;           /* tengah menegak */
     justify-content: space-between;
     padding: 40px 30px;
+    .header-giatmara img {
+    max-width: 300px;   /* saiz gambar */
+    height: auto;
+
 }
+
