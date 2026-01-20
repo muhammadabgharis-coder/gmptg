@@ -113,10 +113,12 @@ footer {
 
 
 .gambar-utama {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
+    width: 300px;          /* saiz petak */
+    height: 300px;
+    object-fit: cover;     /* tak herot */
     display: block;
+    margin: 0 auto;        /* tengah */
+    border-radius: 12px;   /* optional, bucu lembut */
 }
 
 
@@ -145,6 +147,7 @@ footer {
     object-fit: cover;     /* supaya gambar petak tak herot */
     border-radius: 8px;
 }
+
 
 
 
