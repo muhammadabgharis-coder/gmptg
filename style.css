@@ -218,3 +218,45 @@ header img:not(:first-child) {
     text-decoration: none;
     color: inherit;
 }
+
+/* PROFIL CEO */
+.profil-ceo {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* GAMBAR CEO */
+.profil-ceo img {
+    width: 220px;
+    height: auto;
+    border-radius: 14px;
+}
+
+/* TEKS CEO */
+.profil-text h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.profil-text p {
+    color: #3e5f44;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE (HP) */
+@media (max-width: 768px) {
+    .profil-ceo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profil-ceo img {
+        width: 70%;
+    }
+}
