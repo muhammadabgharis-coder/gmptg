@@ -176,3 +176,16 @@ footer p {
         padding: 25px;
     }
 }
+
+/* BESARKAN GAMBAR GIATMARA DALAM HEADER */
+header img:not(:first-child) {
+    max-width: 650px;   /* ubah 600 / 650 / 700 ikut suka */
+    width: 90%;
+}
+
+header img:not(:first-child) {
+    max-width: 650px;
+    width: 90%;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
