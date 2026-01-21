@@ -1,97 +1,157 @@
-body {
+/* ===============================
+   RESET & ASAS
+================================ */
+* {
     margin: 0;
-    font-family: 'Courier New', monospace; /* rasa terminal hacker */
-    background: #0d0d0d; /* hitam gelap */
-    color: #00ff00;       /* teks neon hijau */
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header */
+body {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    background: #f1f8f4;        /* hijau lembut */
+    color: #2e7d32;             /* hijau daun */
+    line-height: 1.7;
+}
+
+/* ===============================
+   HEADER
+================================ */
 header {
-    background: linear-gradient(135deg, #001100, #003300); /* gelap ke hijau */
-    color: #00ff00;
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: #ffffff;
     text-align: center;
-    padding: 80px 20px;
-    width: 100%;
+    padding: 70px 20px;
 }
 
 header h1 {
+    font-size: 2.6rem;
     margin-bottom: 10px;
-    text-shadow: 0 0 8px #00ff00; /* glow hacker */
 }
 
-/* Navigation */
+header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* Logo GIATMARA */
+header img {
+    max-width: 220px;
+    margin-bottom: 20px;
+}
+
+/* ===============================
+   NAVIGATION
+================================ */
 nav {
-    background: #001100; /* gelap */
-    padding: 12px;
+    background: #ffffff;
+    padding: 14px;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 nav a {
-    color: #00ff00;
-    margin: 0 18px;
+    color: #2e7d32;
+    margin: 0 16px;
     text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+    font-weight: 600;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #00ffff; /* neon cyan effect */
-    text-shadow: 0 0 6px #00ffff;
+    color: #1b5e20;
+    border-bottom: 2px solid #66bb6a;
+    padding-bottom: 4px;
 }
 
-/* Hero section */
+/* ===============================
+   HERO / SECTION UTAMA
+================================ */
 .hero {
-    background: #111111; /* gelap untuk highlight */
-    margin: 30px;
-    padding: 35px;
-    border-radius: 15px;
-    border-top: 6px solid #00ff00;
-    animation: fadeIn 1.2s;
-    box-shadow: 0 0 15px #00ff00;
+    background: #ffffff;
+    margin: 30px auto;
+    padding: 40px;
+    max-width: 1100px;
+    border-radius: 18px;
+    border-top: 6px solid #66bb6a;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    animation: fadeIn 1s ease;
 }
 
-/* Content */
+/* ===============================
+   CONTENT
+================================ */
 .content {
-    margin: 30px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
-/* Card design */
+/* ===============================
+   CARD
+================================ */
 .card {
-    background: #111111;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-left: 8px solid #00ff00;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0,255,0,0.2);
+    background: #ffffff;
+    padding: 28px;
+    margin-bottom: 30px;
+    border-left: 6px solid #66bb6a;
+    border-radius: 14px;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.08);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card h3 {
-    color: #00ff00;
-    text-shadow: 0 0 4px #00ff00;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #3e5f44;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0,255,0,0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
-/* Footer */
+/* ===============================
+   IMAGES
+================================ */
+img,
+.gambar-utama,
+.gambar-kursus,
+.card-image img,
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 14px;
+}
+
+/* ===============================
+   FOOTER
+================================ */
 footer {
-    background: #001100;
-    color: #00ff00;
+    background: #2e7d32;
+    color: #ffffff;
     text-align: center;
-    padding: 18px;
+    padding: 20px;
     margin-top: 40px;
-    text-shadow: 0 0 4px #00ff00;
 }
 
-/* Animation */
+footer p {
+    font-size: 0.95rem;
+}
+
+/* ===============================
+   ANIMATION
+================================ */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -99,41 +159,20 @@ footer {
     }
 }
 
-/* Images */
-/* Images */
-.gambar-utama, .gambar-kursus, .card-image img, .hero-image img {
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
 
-    width: 100%;          /* ikut saiz kotak */
-    max-width: 500px;     /* ⬅ gambar TAK lebih 500px */
-    height: auto;         /* jaga nisbah gambar */
-    display: block;       
-    margin: 20px auto;    /* center */
+    nav a {
+        display: inline-block;
+        margin: 8px 10px;
+    }
 
-
-    /* Header GIATMARA */
-.header-giatmara {
-    display: flex;                 /* susun kiri & kanan */
-    align-items: center;           /* tengah menegak */
-    justify-content: space-between;
-    padding: 40px 30px;
-    .header-giatmara img {
-    max-width: 300px;   /* saiz gambar */
-    height: auto;
-
-}
-
-/* ===== FORCE BACKGROUND GIATMARA ===== */
-body {
-    background: #0d0d0d !important;
-    color: #00ff00 !important;
-}
-
-header {
-    background: linear-gradient(135deg, #001100, #003300) !important;
-    color: #00ff00 !important;
-}
-
-
-html, body {
-    background: red !important;
+    .hero {
+        padding: 25px;
+    }
 }
