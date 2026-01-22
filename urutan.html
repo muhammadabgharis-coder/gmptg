@@ -5,55 +5,136 @@
     <title>KURSUS URUTAN</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<header class="header-giatmara">
-   <img src="urutan.jpg" alt="GIATMARA">
-    <h1>KURSUS URUTAN</h1>
-    <p>GIATMARA Prima Tasek Gelugor</p>
+<body style="margin:0; font-family:'Segoe UI', sans-serif; background:#f2f5f7;">
+
+<!-- HEADER -->
+<header style="
+    background:linear-gradient(135deg, #7c2d12, #b45309);
+    color:white;
+    padding:60px 20px;
+">
+    <div style="
+        max-width:1100px;
+        margin:auto;
+        display:flex;
+        align-items:center;
+        gap:40px;
+        flex-wrap:wrap;
+    ">
+        <img src="urutan.jpg" alt="GIATMARA" style="width:200px; border-radius:14px;">
+
+        <div>
+            <h1 style="font-size:42px; margin:0;">KURSUS URUTAN</h1>
+            <p style="font-size:18px; color:#fde68a;">
+                GIATMARA Prima Tasek Gelugor
+            </p>
+        </div>
+    </div>
 </header>
 
-<nav>
-    <a href="index.html">Utama</a>
-    <a href="program.html">Program</a>
-    <a href="hubungi.html">Hubungi Kami</a>
+<!-- NAV -->
+<nav style="
+    background:#78350f;
+    padding:15px;
+    text-align:center;
+">
+    <a href="index.html" style="color:white; margin:0 20px; text-decoration:none;">Utama</a>
+    <a href="program.html" style="color:white; margin:0 20px; text-decoration:none;">Program</a>
+    <a href="hubungi.html" style="color:white; margin:0 20px; text-decoration:none;">Hubungi Kami</a>
 </nav>
 
-<section class="content">
-    <h2>Pengenalan</h2>
-    <p>
-        Kursus Urutan memberi latihan kemahiran dalam teknik urutan badan,
-        rawatan kesihatan asas dan penjagaan pelanggan bagi industri spa
-        dan kesihatan.
-    </p>
+<!-- CONTENT -->
+<section style="
+    max-width:1100px;
+    margin:60px auto;
+    padding:0 20px;
+">
 
-    <h2>Apa yang Dipelajari</h2>
-    <ul>
-        <li>Asas Urutan Tradisional</li>
-        <li>Urutan Badan & Relaksasi</li>
-        <li>Urutan Spa & Terapi</li>
-        <li>Etika & Keselamatan Pelanggan</li>
-        <li>Asas Keusahawanan Spa</li>
-    </ul>
+    <!-- PENGENALAN -->
+    <div style="
+        background:white;
+        padding:40px;
+        border-left:8px solid #b45309;
+        margin-bottom:40px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    ">
+        <h2>Pengenalan</h2>
+        <p style="line-height:1.9;">
+            Kursus Urutan memberi latihan kemahiran dalam teknik urutan badan,
+            rawatan kesihatan asas dan penjagaan pelanggan bagi industri spa
+            dan kesihatan.
+        </p>
+    </div>
 
-    <h2>Peluang Kerjaya</h2>
-    <p>
-         <li>Terapi Urut</li>
-        <li>Usahawan</li>
-        <li>Terapi Komplementari</li>
-        <li>Pengajar</li>
-    </p>
+    <!-- GRID -->
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+        gap:30px;
+    ">
 
-    <br>
-    <a href="program.html">⬅ Kembali ke Senarai Program</a>
+        <!-- APA DIPelajari -->
+        <div style="
+            background:white;
+            padding:35px;
+            border-top:6px solid #92400e;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+        ">
+            <h2>Apa yang Dipelajari</h2>
+            <ul style="line-height:2;">
+                <li>Asas Urutan Tradisional</li>
+                <li>Urutan Badan & Relaksasi</li>
+                <li>Urutan Spa & Terapi</li>
+                <li>Etika & Keselamatan Pelanggan</li>
+                <li>Asas Keusahawanan Spa</li>
+            </ul>
+        </div>
+
+        <!-- PELUANG KERJAYA -->
+        <div style="
+            background:white;
+            padding:35px;
+            border-top:6px solid #15803d;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+        ">
+            <h2>Peluang Kerjaya</h2>
+            <ul style="line-height:2;">
+                <li>Terapi Urut</li>
+                <li>Usahawan</li>
+                <li>Terapi Komplementari</li>
+                <li>Pengajar</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- BACK -->
+    <div style="margin-top:50px;">
+        <a href="program.html" style="
+            background:#fbbf24;
+            color:black;
+            padding:14px 30px;
+            text-decoration:none;
+            font-weight:bold;
+            border-radius:30px;
+            display:inline-block;
+        ">
+            ⬅ Kembali ke Senarai Program
+        </a>
+    </div>
+
 </section>
 
-<footer>
+<!-- FOOTER -->
+<footer style="
+    background:#7c2d12;
+    color:#fde68a;
+    text-align:center;
+    padding:25px;
+">
     <p>© 2026 GIATMARA Prima Tasek Gelugor</p>
 </footer>
 
 </body>
 </html>
-
-
-
