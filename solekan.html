@@ -5,57 +5,137 @@
     <title>KURSUS SOLEKAN</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<header class="header-giatmara">
-     <img src="solekan1.jpg" alt="GIATMARA">
-    <h1>KURSUS SOLEKAN</h1>
-    <p>GIATMARA Prima Tasek Gelugor</p>
+<body style="margin:0; font-family:'Segoe UI', sans-serif; background:#fdf2f8;">
+
+<!-- HEADER -->
+<header style="
+    background:linear-gradient(135deg, #be185d, #ec4899);
+    color:white;
+    padding:60px 20px;
+">
+    <div style="
+        max-width:1100px;
+        margin:auto;
+        display:flex;
+        align-items:center;
+        gap:40px;
+        flex-wrap:wrap;
+    ">
+        <img src="solekan1.jpg" alt="GIATMARA" style="width:200px; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.2);">
+
+        <div>
+            <h1 style="font-size:42px; margin:0;">KURSUS SOLEKAN</h1>
+            <p style="font-size:18px; color:#fbcfe8;">
+                GIATMARA Prima Tasek Gelugor
+            </p>
+        </div>
+    </div>
 </header>
 
-<nav>
-    <a href="index.html">Utama</a>
-    <a href="program.html">Program</a>
-    <a href="hubungi.html">Hubungi Kami</a>
+<!-- NAV -->
+<nav style="
+    background:#9d174d;
+    padding:15px;
+    text-align:center;
+">
+    <a href="index.html" style="color:white; margin:0 20px; text-decoration:none;">Utama</a>
+    <a href="program.html" style="color:white; margin:0 20px; text-decoration:none;">Program</a>
+    <a href="hubungi.html" style="color:white; margin:0 20px; text-decoration:none;">Hubungi Kami</a>
 </nav>
 
-<section class="content">
-    <h2>Pengenalan</h2>
-    <p>
-        Kursus Solekan memberi pendedahan kepada teknik solekan profesional
-        merangkumi solekan harian, majlis, pengantin dan industri kreatif.
-    </p>
+<!-- CONTENT -->
+<section style="
+    max-width:1100px;
+    margin:60px auto;
+    padding:0 20px;
+">
 
-    <h2>Apa yang Dipelajari</h2>
-    <ul>
-        <li>Asas Solekan Wajah</li>
-        <li>Solekan Harian & Profesional</li>
-        <li>Solekan Majlis & Pengantin</li>
-        <li>Penggunaan Alat & Produk Solekan</li>
-        <li>Etika & Pengurusan Pelanggan</li>
-    </ul>
+    <!-- PENGENALAN -->
+    <div style="
+        background:white;
+        padding:40px;
+        border-left:8px solid #ec4899;
+        margin-bottom:40px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    ">
+        <h2>Pengenalan</h2>
+        <p style="line-height:1.9;">
+            Kursus Solekan memberi pendedahan kepada teknik solekan profesional
+            merangkumi solekan harian, majlis, pengantin dan industri kreatif.
+        </p>
+    </div>
 
-    <h2>Peluang Kerjaya</h2>
-    <p>
-        <li>Asas Solekan Wajah</li>
-        <li>Solekan Harian & Profesional</li>
-        <li>Solekan Majlis & Pengantin</li>
-        <li>Penggunaan Alat & Produk Solekan</li>
-        <li>Etika & Pengurusan Pelanggan</li>
-    </p>
+    <!-- GRID -->
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+        gap:30px;
+    ">
 
-    <br>
-    <a href="program.html">⬅ Kembali ke Senarai Program</a>
+        <!-- APA DIPelajari -->
+        <div style="
+            background:white;
+            padding:35px;
+            border-top:6px solid #db2777;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+        ">
+            <h2>Apa yang Dipelajari</h2>
+            <ul style="line-height:2;">
+                <li>Asas Solekan Wajah</li>
+                <li>Solekan Harian & Profesional</li>
+                <li>Solekan Majlis & Pengantin</li>
+                <li>Penggunaan Alat & Produk Solekan</li>
+                <li>Etika & Pengurusan Pelanggan</li>
+            </ul>
+        </div>
+
+        <!-- PELUANG KERJAYA -->
+        <div style="
+            background:white;
+            padding:35px;
+            border-top:6px solid #9333ea;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+        ">
+            <h2>Peluang Kerjaya</h2>
+            <ul style="line-height:2;">
+                <li>Asas Solekan Wajah</li>
+                <li>Solekan Harian & Profesional</li>
+                <li>Solekan Majlis & Pengantin</li>
+                <li>Penggunaan Alat & Produk Solekan</li>
+                <li>Etika & Pengurusan Pelanggan</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- BACK -->
+    <div style="margin-top:50px;">
+        <a href="program.html" style="
+            background:#f472b6;
+            color:white;
+            padding:14px 30px;
+            text-decoration:none;
+            font-weight:bold;
+            border-radius:30px;
+            display:inline-block;
+            box-shadow:0 8px 20px rgba(0,0,0,0.15);
+        ">
+            ⬅ Kembali ke Senarai Program
+        </a>
+    </div>
+
 </section>
 
-<footer>
+<!-- FOOTER -->
+<footer style="
+    background:#9d174d;
+    color:#fbcfe8;
+    text-align:center;
+    padding:25px;
+">
     <p>© 2026 GIATMARA Prima Tasek Gelugor</p>
 </footer>
 
 </body>
 </html>
-
-
-
-
-
