@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<title>Login GIATMARA</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+.box{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    width:300px;
+}
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+button{
+    width:100%;
+    padding:10px;
+    background:#2563eb;
+    color:white;
+    border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Login</h2>
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="msg" style="color:red;"></p>
+</div>
+
+<script>
+function login(){
+    var u = document.getElementById("user").value;
+    var p = document.getElementById("pass").value;
+
+    if(u=="admin" && p=="1234"){
+        window.location="index.html";
+    }else{
+        document.getElementById("msg").innerText="Salah username / password";
+    }
+}
+</script>
+
+</body>
+</html>
