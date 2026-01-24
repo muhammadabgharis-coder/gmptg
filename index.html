@@ -16,25 +16,27 @@ body{
 }
 
 .box{
-    width:340px;
-    padding:35px;
+    width:360px;
+    padding:40px;
     background:#020617;
-    border-radius:20px;
+    border-radius:22px;
     text-align:center;
     color:white;
-    box-shadow:0 0 40px rgba(34,211,238,.2);
+    box-shadow:0 0 60px rgba(34,211,238,.35);
 }
 
 h2{
     color:#22d3ee;
-    text-shadow:0 0 20px #22d3ee;
-    margin-bottom:25px;
+    text-shadow:
+        0 0 15px #22d3ee,
+        0 0 35px #22d3ee;
+    margin-bottom:30px;
 }
 
-/* ===== SNAKE INPUT ===== */
+/* ===== NEON ULAR TEBAL ===== */
 .field{
     position:relative;
-    margin:22px 0;
+    margin:26px 0;
 }
 
 .field svg{
@@ -45,14 +47,18 @@ h2{
     pointer-events:none;
 }
 
+/* ULAR NEON */
 .field rect{
     fill:none;
     stroke:#22d3ee;
-    stroke-width:2.5;
-    stroke-dasharray:140;
-    stroke-dashoffset:280;
-    filter:drop-shadow(0 0 8px #22d3ee);
-    animation:snake 2.5s linear infinite;
+    stroke-width:5; /* 🔥 TEBAL */
+    stroke-dasharray:160;
+    stroke-dashoffset:320;
+    animation:snake 2.2s linear infinite;
+    filter:
+        drop-shadow(0 0 6px #22d3ee)
+        drop-shadow(0 0 14px #22d3ee)
+        drop-shadow(0 0 30px #22d3ee);
 }
 
 @keyframes snake{
@@ -63,41 +69,45 @@ h2{
 
 .field input{
     width:100%;
-    padding:14px;
+    padding:16px;
     border:none;
     outline:none;
     background:#020617;
     color:white;
-    border-radius:14px;
+    border-radius:16px;
     position:relative;
     z-index:1;
+    font-size:15px;
 }
 
-/* Button */
+/* BUTTON */
 button{
     width:100%;
-    margin-top:25px;
-    padding:14px;
+    margin-top:28px;
+    padding:16px;
     border:none;
-    border-radius:14px;
+    border-radius:18px;
     background:#22d3ee;
     color:#020617;
     font-weight:bold;
     cursor:pointer;
     box-shadow:
         0 0 15px #22d3ee,
-        0 0 35px #22d3ee;
+        0 0 40px #22d3ee,
+        0 0 80px #22d3ee;
     transition:.3s;
 }
 
 button:hover{
-    transform:scale(1.05);
+    transform:scale(1.07);
 }
 
 #msg{
-    margin-top:15px;
+    margin-top:18px;
     color:#fb7185;
-    text-shadow:0 0 10px #fb7185;
+    text-shadow:
+        0 0 10px #fb7185,
+        0 0 25px #fb7185;
 }
 </style>
 </head>
@@ -110,14 +120,14 @@ button:hover{
     <div class="field">
         <input type="text" id="user" placeholder="Username">
         <svg viewBox="0 0 100 40" preserveAspectRatio="none">
-            <rect x="1" y="1" width="98" height="38" rx="8"/>
+            <rect x="1" y="1" width="98" height="38" rx="10"/>
         </svg>
     </div>
 
     <div class="field">
         <input type="password" id="pass" placeholder="Password">
         <svg viewBox="0 0 100 40" preserveAspectRatio="none">
-            <rect x="1" y="1" width="98" height="38" rx="8"/>
+            <rect x="1" y="1" width="98" height="38" rx="10"/>
         </svg>
     </div>
 
