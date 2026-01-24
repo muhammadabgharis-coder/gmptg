@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-    <meta charset="UTF-8">
-    <title>Program - GIATMARA Prima</title>
+<meta charset="UTF-8">
+<title>Program - GIATMARA Prima</title>
 
 <style>
 body{
     margin:0;
     font-family:'Segoe UI', sans-serif;
-    background:#f1f5f9;
+    background:#020617;
 }
 
 /* HEADER */
 header{
-    background:linear-gradient(135deg,#0f172a,#1e40af);
+    background:linear-gradient(135deg,#020617,#1e3a8a);
     color:white;
     padding:60px 20px;
     text-align:center;
@@ -21,12 +21,12 @@ header{
 
 /* NAV */
 nav{
-    background:#1e293b;
+    background:#020617;
     padding:16px;
     text-align:center;
 }
 nav a{
-    color:white;
+    color:#e0e7ff;
     margin:0 22px;
     text-decoration:none;
     font-weight:500;
@@ -39,32 +39,31 @@ section{
     padding:0 20px;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:35px;
+    gap:40px;
 }
 
-/* NEON CARD */
+/* ===== NEON CARD ===== */
 .neon-card{
     position:relative;
-    border-radius:16px;
+    border-radius:20px;
     overflow:hidden;
-    transition:0.3s ease;
 }
 
-/* NEON ULAR */
+/* NEON ULAR BORDER */
 .neon-card::before{
     content:"";
     position:absolute;
-    inset:-3px;
-    background:linear-gradient(
-        0deg,
-        #00f0ff,
-        #7c3aed,
+    inset:-4px;
+    background:conic-gradient(
+        from 0deg,
+        #22d3ee,
+        #a855f7,
         #22c55e,
-        #00f0ff
+        #facc15,
+        #fb7185,
+        #22d3ee
     );
-    background-size:300% 300%;
-    animation:neonSpin 6s linear infinite;
-    filter:blur(8px);
+    animation:spin 4s linear infinite;
     z-index:0;
 }
 
@@ -72,36 +71,51 @@ section{
 .neon-card::after{
     content:"";
     position:absolute;
-    inset:3px;
-    background:white;
-    border-radius:14px;
+    inset:4px;
+    background:#0f172a;
+    border-radius:16px;
     z-index:1;
 }
 
+/* CONTENT */
 .neon-content{
     position:relative;
     z-index:2;
+    color:#e5e7eb;
+    transition:0.4s ease;
 }
 
+/* HOVER EFFECT */
+.neon-card:hover::before{
+    filter:blur(2px);
+}
 .neon-card:hover{
     transform:translateY(-12px);
 }
 
-.neon-card:hover::before{
-    filter:blur(14px);
+/* IMAGE */
+.neon-content img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
 }
 
-/* ANIMASI */
-@keyframes neonSpin{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+/* TEXT */
+.neon-content div{
+    padding:25px;
+}
+
+/* ANIMATION */
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
 }
 
 /* FOOTER */
 footer{
-    background:#0f172a;
-    color:#c7d2fe;
+    background:#020617;
+    color:#94a3b8;
     text-align:center;
     padding:25px;
 }
@@ -124,66 +138,62 @@ footer{
 
 <section>
 
-<!-- TSK -->
-<a href="tskomputer.html" style="text-decoration:none;color:inherit;">
+<!-- CARD -->
+<a href="tskomputer.html" style="text-decoration:none;">
 <div class="neon-card">
 <div class="neon-content">
-<img src="tsk.jpg" style="width:100%;height:220px;object-fit:cover;">
-<div style="padding:25px;">
+<img src="tsk.jpg">
+<div>
 <h3>Teknologi Sistem Komputer</h3>
-<p>Melatih kemahiran pembangunan, penyelenggaraan dan pengurusan sistem komputer.</p>
+<p>Latihan pembangunan, penyelenggaraan dan pengurusan sistem komputer.</p>
 </div>
 </div>
 </div>
 </a>
 
-<!-- ELEKTRIK -->
-<a href="pw4elektrik.html" style="text-decoration:none;color:inherit;">
+<a href="pw4elektrik.html" style="text-decoration:none;">
 <div class="neon-card">
 <div class="neon-content">
-<img src="pw4.jpg" style="width:100%;height:220px;object-fit:cover;">
-<div style="padding:25px;">
+<img src="pw4.jpg">
+<div>
 <h3>Pendawaian Elektrik</h3>
-<p>Sistem pendawaian elektrik mengikut piawaian keselamatan Suruhanjaya Tenaga.</p>
+<p>Sistem pendawaian elektrik mengikut piawaian keselamatan ST.</p>
 </div>
 </div>
 </div>
 </a>
 
-<!-- URUTAN -->
-<a href="urutan.html" style="text-decoration:none;color:inherit;">
+<a href="urutan.html" style="text-decoration:none;">
 <div class="neon-card">
 <div class="neon-content">
-<img src="spa.jpg" style="width:100%;height:220px;object-fit:cover;">
-<div style="padding:25px;">
+<img src="spa.jpg">
+<div>
 <h3>Urutan</h3>
-<p>Teknik urutan tradisional dan terapi untuk kesihatan dan kerjaya spa.</p>
+<p>Teknik urutan tradisional dan terapi untuk kesihatan dan spa.</p>
 </div>
 </div>
 </div>
 </a>
 
-<!-- SOLEKAN -->
-<a href="solekan.html" style="text-decoration:none;color:inherit;">
+<a href="solekan.html" style="text-decoration:none;">
 <div class="neon-card">
 <div class="neon-content">
-<img src="stk1.jpg" style="width:100%;height:220px;object-fit:cover;">
-<div style="padding:25px;">
+<img src="stk1.jpg">
+<div>
 <h3>Solekan</h3>
-<p>Melahirkan jurusolek profesional dan usahawan dalam industri kecantikan.</p>
+<p>Melahirkan jurusolek profesional dan usahawan.</p>
 </div>
 </div>
 </div>
 </a>
 
-<!-- MEKATRONIK -->
-<a href="meka.html" style="text-decoration:none;color:inherit;">
+<a href="meka.html" style="text-decoration:none;">
 <div class="neon-card">
 <div class="neon-content">
-<img src="meka.jpg" style="width:100%;height:220px;object-fit:cover;">
-<div style="padding:25px;">
+<img src="meka.jpg">
+<div>
 <h3>Mekatronik</h3>
-<p>Sistem automasi dan robotik merangkumi elektronik dan mekanikal.</p>
+<p>Sistem automasi dan robotik terkini.</p>
 </div>
 </div>
 </div>
