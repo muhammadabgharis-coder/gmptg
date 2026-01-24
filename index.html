@@ -5,44 +5,106 @@
 <title>Login GIATMARA</title>
 
 <style>
+*{
+    box-sizing:border-box;
+    font-family:'Segoe UI', Arial, sans-serif;
+}
+
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#0f172a;
+    height:100vh;
+    background:linear-gradient(135deg,#020617,#020617);
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    overflow:hidden;
 }
+
+/* Neon animated border */
+.neon-wrapper{
+    padding:3px;
+    border-radius:15px;
+    background:linear-gradient(270deg,#22d3ee,#6366f1,#22d3ee);
+    background-size:600% 600%;
+    animation:neonMove 6s ease infinite;
+}
+
+@keyframes neonMove{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 .box{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    width:300px;
+    background:#020617;
+    padding:35px;
+    border-radius:12px;
+    width:320px;
+    color:white;
+    box-shadow:0 0 25px rgba(34,211,238,0.4);
 }
+
+.box h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#22d3ee;
+    text-shadow:0 0 10px #22d3ee;
+}
+
 input{
     width:100%;
-    padding:10px;
-    margin:10px 0;
+    padding:12px;
+    margin:12px 0;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    background:#020617;
+    color:white;
+    border:1px solid #334155;
 }
+
+input:focus{
+    border-color:#22d3ee;
+    box-shadow:0 0 10px #22d3ee;
+}
+
 button{
     width:100%;
-    padding:10px;
-    background:#2563eb;
-    color:white;
+    padding:12px;
+    margin-top:15px;
     border:none;
+    border-radius:8px;
+    background:#22d3ee;
+    color:#020617;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(34,211,238,0.6);
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 25px rgba(34,211,238,0.9);
+}
+
+#msg{
+    margin-top:12px;
+    text-align:center;
+    color:#f87171;
 }
 </style>
 </head>
 
 <body>
 
-<div class="box">
-    <h2>Login</h2>
-    <input type="text" id="user" placeholder="Username">
-    <input type="password" id="pass" placeholder="Password">
-    <button onclick="login()">Login</button>
-    <p id="msg" style="color:red;"></p>
+<div class="neon-wrapper">
+    <div class="box">
+        <h2>Login GIATMARA</h2>
+        <input type="text" id="user" placeholder="Username">
+        <input type="password" id="pass" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="msg"></p>
+    </div>
 </div>
 
 <script>
@@ -60,5 +122,3 @@ function login(){
 
 </body>
 </html>
-
-
