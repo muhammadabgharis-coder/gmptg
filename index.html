@@ -5,11 +5,6 @@
 <title>Login GIATMARA</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    font-family:'Segoe UI', Arial, sans-serif;
-}
-
 body{
     margin:0;
     height:100vh;
@@ -17,85 +12,64 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-}
-
-/* Neon outer frame */
-.wrapper{
-    padding:4px;
-    border-radius:20px;
-    background:linear-gradient(270deg,#22d3ee,#6366f1,#22d3ee);
-    background-size:600% 600%;
-    animation:borderMove 6s linear infinite;
-}
-
-@keyframes borderMove{
-    0%{background-position:0% 50%}
-    100%{background-position:100% 50%}
+    font-family:'Segoe UI',sans-serif;
 }
 
 .box{
-    background:#020617;
-    padding:35px;
     width:340px;
-    border-radius:16px;
+    padding:35px;
+    background:#020617;
+    border-radius:20px;
     text-align:center;
     color:white;
+    box-shadow:0 0 40px rgba(34,211,238,.2);
 }
 
 h2{
     color:#22d3ee;
+    text-shadow:0 0 20px #22d3ee;
     margin-bottom:25px;
-    text-shadow:
-        0 0 10px #22d3ee,
-        0 0 25px #22d3ee;
 }
 
-/* ====== NEON SNAKE INPUT ====== */
-.input-wrap{
+/* ===== SNAKE INPUT ===== */
+.field{
     position:relative;
-    margin:18px 0;
-    padding:3px;
-    border-radius:14px;
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #22d3ee,
-        transparent
-    );
-    background-size:300% 300%;
-    animation:snake 3s linear infinite;
+    margin:22px 0;
+}
+
+.field svg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+.field rect{
+    fill:none;
+    stroke:#22d3ee;
+    stroke-width:2.5;
+    stroke-dasharray:140;
+    stroke-dashoffset:280;
+    filter:drop-shadow(0 0 8px #22d3ee);
+    animation:snake 2.5s linear infinite;
 }
 
 @keyframes snake{
-    0%{background-position:0% 50%}
-    100%{background-position:300% 50%}
+    to{
+        stroke-dashoffset:0;
+    }
 }
 
-.input-wrap::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    border-radius:14px;
-    background:linear-gradient(
-        90deg,
-        transparent,
-        #22d3ee,
-        transparent
-    );
-    filter:blur(8px);
-    opacity:0.9;
-    animation:snake 3s linear infinite reverse;
-}
-
-.input-wrap input{
-    position:relative;
+.field input{
     width:100%;
-    padding:13px;
+    padding:14px;
     border:none;
     outline:none;
-    border-radius:12px;
     background:#020617;
     color:white;
+    border-radius:14px;
+    position:relative;
     z-index:1;
 }
 
@@ -103,23 +77,17 @@ h2{
 button{
     width:100%;
     margin-top:25px;
-    padding:13px;
+    padding:14px;
     border:none;
-    border-radius:12px;
+    border-radius:14px;
     background:#22d3ee;
     color:#020617;
     font-weight:bold;
     cursor:pointer;
     box-shadow:
         0 0 15px #22d3ee,
-        0 0 30px #22d3ee;
-    animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-    0%{box-shadow:0 0 15px #22d3ee}
-    50%{box-shadow:0 0 35px #22d3ee}
-    100%{box-shadow:0 0 15px #22d3ee}
+        0 0 35px #22d3ee;
+    transition:.3s;
 }
 
 button:hover{
@@ -131,4 +99,44 @@ button:hover{
     color:#fb7185;
     text-shadow:0 0 10px #fb7185;
 }
-</s
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>LOGIN GIATMARA</h2>
+
+    <div class="field">
+        <input type="text" id="user" placeholder="Username">
+        <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+            <rect x="1" y="1" width="98" height="38" rx="8"/>
+        </svg>
+    </div>
+
+    <div class="field">
+        <input type="password" id="pass" placeholder="Password">
+        <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+            <rect x="1" y="1" width="98" height="38" rx="8"/>
+        </svg>
+    </div>
+
+    <button onclick="login()">LOGIN</button>
+    <p id="msg"></p>
+</div>
+
+<script>
+function login(){
+    var u = document.getElementById("user").value;
+    var p = document.getElementById("pass").value;
+
+    if(u=="admin" && p=="Skills39"){
+        window.location="home.html";
+    }else{
+        document.getElementById("msg").innerText="Salah username / password";
+    }
+}
+</script>
+
+</body>
+</html>
