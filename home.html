@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>GIATMARA PRIMA TASEK GELUGOR</title>
+    <link rel="stylesheet" href="style.css">
 
+    <!-- NEON EFFECT (INLINE, TAK KACAU CSS) -->
     <style>
-        body{
-            margin:0;
-            font-family:'Segoe UI', sans-serif;
-            background:#f1f5f9;
-        }
-
-        /* NEON BORDER */
-        .neon-box{
+        .neon-wrap{
             position:relative;
-            border-radius:18px;
-            overflow:hidden;
+            border-radius:20px;
         }
 
-        .neon-box::before{
+        .neon-wrap::before{
             content:"";
             position:absolute;
-            inset:-3px;
+            inset:-10px; /* 🔥 TEBAL */
             background:linear-gradient(
                 45deg,
                 #22d3ee,
@@ -32,43 +26,21 @@
                 #22d3ee
             );
             background-size:400% 400%;
-            animation:neonMove 6s linear infinite;
+            animation:neonSpin 5s linear infinite;
+            filter:blur(12px); /* 🔥 MENYALA */
             z-index:-1;
+            border-radius:24px;
         }
 
-        .neon-box::after{
-            content:"";
-            position:absolute;
-            inset:3px;
-            background:white;
-            border-radius:14px;
-            z-index:-1;
-        }
-
-        @keyframes neonMove{
-            0%{background-position:0% 50%}
-            50%{background-position:100% 50%}
-            100%{background-position:0% 50%}
-        }
-
-        .hover-float{
-            transition:0.35s ease;
-        }
-
-        .hover-float:hover{
-            transform:translateY(-12px) scale(1.01);
-        }
-
-        nav a{
-            color:white;
-            margin:0 22px;
-            text-decoration:none;
-            font-weight:500;
+        @keyframes neonSpin{
+            0%{background-position:0% 50%;}
+            50%{background-position:100% 50%;}
+            100%{background-position:0% 50%;}
         }
     </style>
 </head>
 
-<body>
+<body style="margin:0; font-family:'Segoe UI', sans-serif; background:#f1f5f9;">
 
 <!-- HEADER -->
 <header style="
@@ -86,17 +58,21 @@
         justify-content:center;
         text-align:center;
     ">
-        <img src="logo-giatmara.png" style="width:130px;">
-        <img src="gambaq.jpg" style="
-            width:230px;
-            border-radius:18px;
-            box-shadow:0 12px 30px rgba(0,0,0,0.3);
-        ">
+        <img src="logo-giatmara.png" alt="Logo GIATMARA" style="width:130px;">
+
+        <div class="neon-wrap">
+            <img src="gambaq.jpg" alt="GIATMARA" style="
+                width:240px;
+                border-radius:16px;
+                box-shadow:0 15px 35px rgba(0,0,0,0.35);
+            ">
+        </div>
+
         <div>
             <h1 style="font-size:42px; margin:0;">
                 GIATMARA PRIMA TASEK GELUGOR
             </h1>
-            <p style="color:#c7d2fe;">
+            <p style="font-size:18px; color:#c7d2fe; margin-top:10px;">
                 Pusat Latihan Kemahiran Ke Arah Masa Depan
             </p>
         </div>
@@ -109,34 +85,49 @@
     padding:16px;
     text-align:center;
 ">
-    <a href="home.html">Utama</a>
-    <a href="program.html">Program</a>
-    <a href="hubungi.html">Hubungi Kami</a>
+    <a href="home.html" style="color:white; margin:0 22px; text-decoration:none;">Utama</a>
+    <a href="program.html" style="color:white; margin:0 22px; text-decoration:none;">Program</a>
+    <a href="hubungi.html" style="color:white; margin:0 22px; text-decoration:none;">Hubungi Kami</a>
 </nav>
 
 <!-- HERO -->
 <section style="max-width:1100px; margin:70px auto; padding:0 20px;">
-    <div class="neon-box hover-float" style="padding:45px;">
-        <h2>Selamat Datang!</h2>
-        <p style="line-height:1.9;">
-            GIATMARA Prima Tasek Gelugor di Pulau Pinang adalah pusat latihan kemahiran untuk belia Bumiputera, menawarkan kursus sijil dalam bidang teknikal dan vokasional seperti elektronik, mekatronik, kecantikan (spa & dandanan rambut), dan sistem komputer, bertujuan melahirkan tenaga kerja mahir dengan kemahiran praktikal dan pendedahan industri untuk meningkatkan peluang pekerjaan dan keusahawanan, dengan penekanan pada program hands-on dan pensijilan diiktiraf. 
-        </p>
+    <div class="neon-wrap">
+        <div style="
+            background:white;
+            padding:45px;
+            border-radius:14px;
+            box-shadow:0 18px 45px rgba(0,0,0,0.15);
+            transition:0.3s;
+        ">
+            <h2>Selamat Datang!</h2>
+            <p style="line-height:1.9;">
+                GIATMARA Prima Tasek Gelugor di Pulau Pinang adalah pusat latihan kemahiran untuk belia Bumiputera,
+                menawarkan kursus sijil dalam bidang teknikal dan vokasional seperti elektronik, mekatronik,
+                kecantikan (spa & dandanan rambut), dan sistem komputer.
+            </p>
+        </div>
     </div>
 </section>
 
 <!-- CONTENT -->
-<section style="max-width:1100px; margin:0 auto 90px; padding:0 20px;">
-    <div class="neon-box hover-float" style="padding:45px;">
-        <h3>Kenapa Pilih GIATMARA?</h3>
-        <ul style="line-height:1.9;">
-            <li>
-                memilih GIATMARA kerana ia menyediakan latihan kemahiran yang berkualiti, berorientasikan amali (praktikal) dan selaras dengan keperluan industri semasa. GIATMARA memberi peluang kepada pelajar untuk menguasai kemahiran sebenar melalui latihan hands-on, sekali gus meningkatkan kebolehpasaran graduan.
-
-                Selain itu, GIATMARA menawarkan yuran latihan yang berpatutan, kemudahan bengkel yang lengkap serta tenaga pengajar yang berpengalaman. Program yang ditawarkan juga diiktiraf dan memberi peluang kepada pelajar untuk bekerja atau menceburi bidang keusahawanan selepas tamat latihan.
-
-                GIATMARA turut membantu melahirkan tenaga kerja mahir tempatan yang berdaya saing serta menyumbang kepada pembangunan ekonomi dan masyarakat.
-            </li>
-        </ul>
+<section style="max-width:1100px; margin:0 auto 80px; padding:0 20px;">
+    <div class="neon-wrap">
+        <div style="
+            background:white;
+            padding:45px;
+            border-radius:14px;
+            box-shadow:0 18px 45px rgba(0,0,0,0.15);
+        ">
+            <h3>Kenapa Pilih GIATMARA?</h3>
+            <ul style="line-height:1.9;">
+                <li>
+                    GIATMARA menyediakan latihan kemahiran berkualiti, berorientasikan amali (hands-on),
+                    yuran berpatutan, tenaga pengajar berpengalaman serta program diiktiraf yang membuka
+                    peluang kerjaya dan keusahawanan.
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
 
