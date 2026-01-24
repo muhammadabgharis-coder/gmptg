@@ -3,171 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <title>Program - GIATMARA Prima</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 
-<body style="margin:0; font-family:'Segoe UI', sans-serif; background:#f1f5f9;">
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background:#f1f5f9;
+}
 
-<!-- HEADER -->
-<header style="
+/* HEADER */
+header{
     background:linear-gradient(135deg,#0f172a,#1e40af);
     color:white;
     padding:60px 20px;
     text-align:center;
-">
-    <img src="logo-giatmara.png" alt="Logo GIATMARA" style="width:120px;">
-    <h1 style="margin:20px 0 10px;">GIATMARA PRIMA TASEK GELUGOR</h1>
-    <p style="color:#c7d2fe;">Pusat Latihan Kemahiran Ke Arah Masa Depan</p>
-</header>
+}
 
-<!-- NAV -->
-<nav style="
+/* NAV */
+nav{
     background:#1e293b;
     padding:16px;
     text-align:center;
-">
-    <a href="home.html" style="color:white; margin:0 22px; text-decoration:none;">Utama</a>
-    <a href="program.html" style="color:white; margin:0 22px; text-decoration:none;">Program</a>
-    <a href="hubungi.html" style="color:white; margin:0 22px; text-decoration:none;">Hubungi Kami</a>
-</nav>
+}
+nav a{
+    color:white;
+    margin:0 22px;
+    text-decoration:none;
+    font-weight:500;
+}
 
-<!-- CONTENT -->
-<section style="
+/* GRID */
+section{
     max-width:1200px;
     margin:70px auto;
     padding:0 20px;
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:35px;
-">
+}
 
-<!-- CARD -->
-<a href="tskomputer.html" style="text-decoration:none; color:inherit;">
-<div style="
-    background:white;
+/* NEON CARD */
+.neon-card{
+    position:relative;
     border-radius:16px;
     overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
     transition:0.3s ease;
-"
-onmouseover="this.style.transform='translateY(-12px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <img src="tsk.jpg" style="width:100%; height:220px; object-fit:cover;">
-    <div style="padding:25px;">
-        <h3>Teknologi Sistem Komputer</h3>
-        <p>
-            melatih kemahiran dalam pembangunan, reka bentuk, penyelenggaraan,
-            dan pengurusan sistem serta rangkaian komputer.
-        </p>
-    </div>
+}
+
+/* NEON ULAR */
+.neon-card::before{
+    content:"";
+    position:absolute;
+    inset:-3px;
+    background:linear-gradient(
+        0deg,
+        #00f0ff,
+        #7c3aed,
+        #22c55e,
+        #00f0ff
+    );
+    background-size:300% 300%;
+    animation:neonSpin 6s linear infinite;
+    filter:blur(8px);
+    z-index:0;
+}
+
+/* DALAM CARD */
+.neon-card::after{
+    content:"";
+    position:absolute;
+    inset:3px;
+    background:white;
+    border-radius:14px;
+    z-index:1;
+}
+
+.neon-content{
+    position:relative;
+    z-index:2;
+}
+
+.neon-card:hover{
+    transform:translateY(-12px);
+}
+
+.neon-card:hover::before{
+    filter:blur(14px);
+}
+
+/* ANIMASI */
+@keyframes neonSpin{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* FOOTER */
+footer{
+    background:#0f172a;
+    color:#c7d2fe;
+    text-align:center;
+    padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo-giatmara.png" style="width:120px;">
+    <h1>GIATMARA PRIMA TASEK GELUGOR</h1>
+    <p>Pusat Latihan Kemahiran Ke Arah Masa Depan</p>
+</header>
+
+<nav>
+    <a href="home.html">Utama</a>
+    <a href="program.html">Program</a>
+    <a href="hubungi.html">Hubungi Kami</a>
+</nav>
+
+<section>
+
+<!-- TSK -->
+<a href="tskomputer.html" style="text-decoration:none;color:inherit;">
+<div class="neon-card">
+<div class="neon-content">
+<img src="tsk.jpg" style="width:100%;height:220px;object-fit:cover;">
+<div style="padding:25px;">
+<h3>Teknologi Sistem Komputer</h3>
+<p>Melatih kemahiran pembangunan, penyelenggaraan dan pengurusan sistem komputer.</p>
+</div>
+</div>
 </div>
 </a>
 
-<!-- CARD -->
-<a href="pw4elektrik.html" style="text-decoration:none; color:inherit;">
-<div style="
-    background:white;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
-    transition:0.3s ease;
-"
-onmouseover="this.style.transform='translateY(-12px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <img src="pw4.jpg" style="width:100%; height:220px; object-fit:cover;">
-    <div style="padding:25px;">
-        <h3>Pendawaian Elektrik</h3>
-        <p>
-            sistem rangkaian kabel dan aksesori untuk mengalirkan arus elektrik ke peralatan,
-            dengan peraturan keselamatan Suruhanjaya Tenaga Malaysia (ST).
-        </p>
-    </div>
+<!-- ELEKTRIK -->
+<a href="pw4elektrik.html" style="text-decoration:none;color:inherit;">
+<div class="neon-card">
+<div class="neon-content">
+<img src="pw4.jpg" style="width:100%;height:220px;object-fit:cover;">
+<div style="padding:25px;">
+<h3>Pendawaian Elektrik</h3>
+<p>Sistem pendawaian elektrik mengikut piawaian keselamatan Suruhanjaya Tenaga.</p>
+</div>
+</div>
 </div>
 </a>
 
-<!-- CARD -->
-<a href="urutan.html" style="text-decoration:none; color:inherit;">
-<div style="
-    background:white;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
-    transition:0.3s ease;
-"
-onmouseover="this.style.transform='translateY(-12px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <img src="spa.jpg" style="width:100%; height:220px; object-fit:cover;">
-    <div style="padding:25px;">
-        <h3>Urutan</h3>
-        <p>
-            teknik urutan tradisional dan terapi untuk kesihatan,
-            membuka peluang kerjaya dalam spa atau perniagaan sendiri.
-        </p>
-    </div>
+<!-- URUTAN -->
+<a href="urutan.html" style="text-decoration:none;color:inherit;">
+<div class="neon-card">
+<div class="neon-content">
+<img src="spa.jpg" style="width:100%;height:220px;object-fit:cover;">
+<div style="padding:25px;">
+<h3>Urutan</h3>
+<p>Teknik urutan tradisional dan terapi untuk kesihatan dan kerjaya spa.</p>
+</div>
+</div>
 </div>
 </a>
 
-<!-- CARD -->
-<a href="solekan.html" style="text-decoration:none; color:inherit;">
-<div style="
-    background:white;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
-    transition:0.3s ease;
-"
-onmouseover="this.style.transform='translateY(-12px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <img src="stk1.jpg" style="width:100%; height:220px; object-fit:cover;">
-    <div style="padding:25px;">
-        <h3>Solekan</h3>
-        <p>
-            teknik solekan harian, majlis dan pengantin untuk melahirkan
-            jurusolek profesional dan usahawan.
-        </p>
-    </div>
+<!-- SOLEKAN -->
+<a href="solekan.html" style="text-decoration:none;color:inherit;">
+<div class="neon-card">
+<div class="neon-content">
+<img src="stk1.jpg" style="width:100%;height:220px;object-fit:cover;">
+<div style="padding:25px;">
+<h3>Solekan</h3>
+<p>Melahirkan jurusolek profesional dan usahawan dalam industri kecantikan.</p>
+</div>
+</div>
 </div>
 </a>
 
-<!-- CARD -->
-<a href="meka.html" style="text-decoration:none; color:inherit;">
-<div style="
-    background:white;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
-    transition:0.3s ease;
-"
-onmouseover="this.style.transform='translateY(-12px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <img src="meka.jpg" style="width:100%; height:220px; object-fit:cover;">
-    <div style="padding:25px;">
-        <h3>Mekatronik</h3>
-        <p>
-            sistem automasi dan robotik merangkumi elektronik, mekanikal,
-            sistem kawalan dan rekabentuk automasi.
-        </p>
-    </div>
+<!-- MEKATRONIK -->
+<a href="meka.html" style="text-decoration:none;color:inherit;">
+<div class="neon-card">
+<div class="neon-content">
+<img src="meka.jpg" style="width:100%;height:220px;object-fit:cover;">
+<div style="padding:25px;">
+<h3>Mekatronik</h3>
+<p>Sistem automasi dan robotik merangkumi elektronik dan mekanikal.</p>
+</div>
+</div>
 </div>
 </a>
 
 </section>
 
-<!-- FOOTER -->
-<footer style="
-    background:#0f172a;
-    color:#c7d2fe;
-    text-align:center;
-    padding:25px;
-">
+<footer>
     <p>© 2026 GIATMARA Prima Tasek Gelugor</p>
 </footer>
 
 </body>
 </html>
-
