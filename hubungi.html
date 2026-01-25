@@ -1,179 +1,157 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-    <meta charset="UTF-8">
-    <title>Hubungi Kami - GIATMARA</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Hubungi Kami - GIATMARA</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.neon-card{
+    position:relative;
+    border-radius:20px;
+    transition:0.35s ease;
+}
+
+.neon-card::before{
+    content:"";
+    position:absolute;
+    inset:-10px;
+    background:linear-gradient(
+        45deg,
+        #22d3ee,
+        #6366f1,
+        #a855f7,
+        #ec4899,
+        #facc15,
+        #22d3ee
+    );
+    background-size:400% 400%;
+    animation:neonFlow 5s linear infinite;
+    filter:blur(14px);
+    z-index:-1;
+    border-radius:26px;
+}
+
+.neon-card:hover{
+    transform:translateY(-14px) scale(1.04);
+}
+
+@keyframes neonFlow{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+</style>
 </head>
 
 <body style="margin:0; font-family:'Segoe UI', sans-serif; background:#f1f5f9;">
 
 <!-- HEADER -->
 <header style="
-    background:linear-gradient(135deg,#0f172a,#1e40af);
-    color:white;
-    padding:60px 20px;
-    text-align:center;
+background:linear-gradient(135deg,#0f172a,#1e40af);
+color:white;
+padding:60px 20px;
+text-align:center;
 ">
-    <img src="logo-giatmara.png" alt="Logo GIATMARA" style="width:120px;">
-    <h1 style="margin:20px 0 10px;">GIATMARA PRIMA TASEK GELUGOR</h1>
-    <p style="color:#c7d2fe;">Pusat Latihan Kemahiran Ke Arah Masa Depan</p>
+<img src="logo-giatmara.png" style="width:120px;">
+<h1 style="margin:20px 0 10px;">GIATMARA PRIMA TASEK GELUGOR</h1>
+<p style="color:#c7d2fe;">Pusat Latihan Kemahiran Ke Arah Masa Depan</p>
 </header>
 
 <!-- NAV -->
-<nav style="
-    background:#1e293b;
-    padding:16px;
-    text-align:center;
-">
-    <a href="home.html" style="color:white; margin:0 22px; text-decoration:none;">Utama</a>
-    <a href="program.html" style="color:white; margin:0 22px; text-decoration:none;">Program</a>
-    <a href="hubungi.html" style="color:white; margin:0 22px; text-decoration:none;">Hubungi Kami</a>
+<nav style="background:#1e293b; padding:16px; text-align:center;">
+<a href="home.html" style="color:white; margin:0 22px; text-decoration:none;">Utama</a>
+<a href="program.html" style="color:white; margin:0 22px; text-decoration:none;">Program</a>
+<a href="hubungi.html" style="color:white; margin:0 22px; text-decoration:none;">Hubungi Kami</a>
 </nav>
 
 <!-- CONTENT -->
-<section style="
-    max-width:900px;
-    margin:70px auto;
-    padding:0 20px;
-">
-
+<section style="max-width:900px; margin:70px auto; padding:0 20px;">
 <h2 style="text-align:center; margin-bottom:40px;">Maklumat Perhubungan</h2>
 
-<!-- CARD CONTAINER -->
 <div style="
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+gap:34px;
 ">
 
-<!-- CARD -->
+<!-- CARD TEMPLATE -->
+<div class="neon-card">
 <div style="
-    background:white;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
-    transition:0.3s;
-"
-onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <strong>📍 Alamat</strong>
-    <p>
-        <a href="https://maps.app.goo.gl/RuRVpJJLan4q5Ufh7" target="_blank" style="text-decoration:none; color:#1e40af;">
-            GIATMARA Prima Tasek Gelugor
-        </a>
-    </p>
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 16px 35px rgba(0,0,0,0.18);
+">
+<strong>📍 Alamat</strong>
+<p>
+<a href="https://maps.app.goo.gl/RuRVpJJLan4q5Ufh7" target="_blank" style="color:#1e40af; text-decoration:none;">
+GIATMARA Prima Tasek Gelugor
+</a>
+</p>
+</div>
 </div>
 
-<!-- CARD -->
-<div style="
-    background:white;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
-    transition:0.3s;
-"
-onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <strong>📞 Telefon</strong>
-    <p>
-        <a href="tel:045756163" style="text-decoration:none; color:#1e40af;">
-            04-575 6163
-        </a>
-    </p>
+<div class="neon-card">
+<div style="background:white; padding:30px; border-radius:16px; box-shadow:0 16px 35px rgba(0,0,0,0.18);">
+<strong>📞 Telefon</strong>
+<p>
+<a href="tel:045756163" style="color:#1e40af; text-decoration:none;">04-575 6163</a>
+</p>
+</div>
 </div>
 
-<!-- CARD -->
-<div style="
-    background:white;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
-    transition:0.3s;
-"
-onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <strong>✉️ Email</strong>
-    <p>
-        <a href="mailto:gmtasekgelugor@giatmara.edu.my" style="text-decoration:none; color:#1e40af;">
-            gmtasekgelugor@giatmara.edu.my
-        </a>
-    </p>
+<div class="neon-card">
+<div style="background:white; padding:30px; border-radius:16px; box-shadow:0 16px 35px rgba(0,0,0,0.18);">
+<strong>✉️ Email</strong>
+<p>
+<a href="mailto:gmtasekgelugor@giatmara.edu.my" style="color:#1e40af; text-decoration:none;">
+gmtasekgelugor@giatmara.edu.my
+</a>
+</p>
+</div>
 </div>
 
-<!-- CARD -->
-<div style="
-    background:white;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
-    transition:0.3s;
-"
-onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <strong>📘 Facebook</strong>
-    <p>
-        <a href="https://www.facebook.com/gmtasekgelugor/?locale=ms_MY" target="_blank" style="text-decoration:none; color:#1e40af;">
-            GIATMARA Prima Tasek Gelugor
-        </a>
-    </p>
+<div class="neon-card">
+<div style="background:white; padding:30px; border-radius:16px; box-shadow:0 16px 35px rgba(0,0,0,0.18);">
+<strong>📘 Facebook</strong>
+<p>
+<a href="https://www.facebook.com/gmtasekgelugor/?locale=ms_MY" target="_blank" style="color:#1e40af; text-decoration:none;">
+GIATMARA Prima Tasek Gelugor
+</a>
+</p>
+</div>
 </div>
 
-<!-- CARD -->
-<div style="
-    background:white;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
-    transition:0.3s;
-"
-onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <strong>📸 Instagram</strong>
-    <p>
-        <a href="https://www.instagram.com/giatmara_prima_tasek_gelugor/?hl=en" target="_blank" style="text-decoration:none; color:#1e40af;">
-            @giatmara_prima_tasek_gelugor
-        </a>
-    </p>
+<div class="neon-card">
+<div style="background:white; padding:30px; border-radius:16px; box-shadow:0 16px 35px rgba(0,0,0,0.18);">
+<strong>📸 Instagram</strong>
+<p>
+<a href="https://www.instagram.com/giatmara_prima_tasek_gelugor/?hl=en" target="_blank" style="color:#1e40af; text-decoration:none;">
+@giatmara_prima_tasek_gelugor
+</a>
+</p>
+</div>
 </div>
 
-<!-- CARD -->
-<div style="
-    background:white;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 12px 30px rgba(0,0,0,0.1);
-    transition:0.3s;
-"
-onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 22px 45px rgba(0,0,0,0.25)'"
-onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 30px rgba(0,0,0,0.1)'"
->
-    <strong>🎵 TikTok</strong>
-    <p>
-        <a href="https://www.tiktok.com/@pkgmtasekgelugorp" target="_blank" style="text-decoration:none; color:#1e40af;">
-            @pkgmtasekgelugorp
-        </a>
-    </p>
+<div class="neon-card">
+<div style="background:white; padding:30px; border-radius:16px; box-shadow:0 16px 35px rgba(0,0,0,0.18);">
+<strong>🎵 TikTok</strong>
+<p>
+<a href="https://www.tiktok.com/@pkgmtasekgelugorp" target="_blank" style="color:#1e40af; text-decoration:none;">
+@pkgmtasekgelugorp
+</a>
+</p>
+</div>
 </div>
 
 </div>
 </section>
 
 <!-- FOOTER -->
-<footer style="
-    background:#0f172a;
-    color:#c7d2fe;
-    text-align:center;
-    padding:25px;
-">
-    <p>© 2026 GIATMARA Prima Tasek Gelugor</p>
+<footer style="background:#0f172a; color:#c7d2fe; text-align:center; padding:25px;">
+<p>© 2026 GIATMARA Prima Tasek Gelugor</p>
 </footer>
 
 </body>
 </html>
-
