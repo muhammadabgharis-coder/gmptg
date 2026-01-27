@@ -5,24 +5,32 @@
 <title>Login GIATMARA</title>
 
 <style>
+/* ===== BODY + BACKGROUND ===== */
 body{
     margin:0;
     height:100vh;
-    background:#020617;
+    background:
+        linear-gradient(rgba(2,6,23,0.75), rgba(2,6,23,0.75)),
+        url("naruto.jpg"); /* 👈 GAMBAR BACKGROUND */
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
     font-family:'Segoe UI',sans-serif;
 }
 
+/* ===== LOGIN BOX ===== */
 .box{
     width:360px;
     padding:40px;
-    background:#020617;
+    background:rgba(2,6,23,0.88);
     border-radius:22px;
     text-align:center;
     color:white;
     box-shadow:0 0 60px rgba(34,211,238,.35);
+    backdrop-filter: blur(6px);
 }
 
 h2{
@@ -33,7 +41,7 @@ h2{
     margin-bottom:30px;
 }
 
-/* ===== NEON ULAR TEBAL ===== */
+/* ===== INPUT FIELD ===== */
 .field{
     position:relative;
     margin:26px 0;
@@ -47,11 +55,11 @@ h2{
     pointer-events:none;
 }
 
-/* ULAR NEON */
+/* NEON ULAR */
 .field rect{
     fill:none;
     stroke:#22d3ee;
-    stroke-width:5; /* 🔥 TEBAL */
+    stroke-width:5;
     stroke-dasharray:160;
     stroke-dashoffset:320;
     animation:snake 2.2s linear infinite;
@@ -80,7 +88,7 @@ h2{
     font-size:15px;
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 button{
     width:100%;
     margin-top:28px;
@@ -102,6 +110,7 @@ button:hover{
     transform:scale(1.07);
 }
 
+/* ===== MESSAGE ===== */
 #msg{
     margin-top:18px;
     color:#fb7185;
